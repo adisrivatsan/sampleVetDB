@@ -1,0 +1,34 @@
+{
+  "name": "node-js-getting-started",
+  "version": "0.2.5",
+  "description": "A sample Node.js app using Express 4",
+  "engines": {
+    "node": "5.9.1"
+  },
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "ejs": "2.4.1",
+    "express": "4.13.3",
+    "http": "0.0.0",
+    "messenger-bot": "^2.3.0",
+    "method-override": "^2.3.6",
+    "mongoose": "^4.4.20",
+    "morgan": "^1.7.0",
+    "node-restful": "^0.2.5",
+    "request": "^2.72.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/greatdane/src"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT"
+}
