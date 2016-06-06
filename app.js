@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.json({type:'application/vnd.api+json'}));
 app.use(methodOverride());
 
-mongoose.connect("mongodb://localhost/");
+mongoose.connect("mongodb://sample-vet-db.herokuapp.com");
 
 var Resource = app.resource = restful.model('resource', mongoose.Schema({
     title: String,
