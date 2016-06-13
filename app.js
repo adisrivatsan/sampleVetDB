@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.json({type:'application/vnd.api+json'}));
 app.use(methodOverride());
 
-mongoose.connect("mongodb://sample-vet-db.herokuapp.com");
+mongoose.connect("mongodb://localhost/" || process.env.MONGOLAB_URI);
 
 var Resource = app.resource = restful.model('resource', mongoose.Schema({
     title: String,
@@ -21,8 +21,7 @@ var Resource = app.resource = restful.model('resource', mongoose.Schema({
   .methods(['get', 'post', 'put', 'delete']);
 
 Resource.register(app, '/resources');
-
-var port = process.env.PORT || 3000;
+var port = 3000 || port.env.PORT;
 
 app.listen(port);
 console.log('listening on port 3000');
