@@ -23,5 +23,10 @@ var Resource = app.resource = restful.model('resource', mongoose.Schema({
 Resource.register(app, '/resources');
 var port = 3000 || port.env.PORT;
 
+
+app.get('/',function(req,res) {
+  res.send('this is working'); 
+})
+
 app.listen(port);
 console.log('listening on port 3000');
