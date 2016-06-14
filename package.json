@@ -1,5 +1,5 @@
 {
-  "name": "node-js-getting-started",
+  "name": "test Db",
   "version": "0.2.5",
   "description": "A sample Node.js app using Express 4",
   "engines": {
@@ -10,15 +10,18 @@
     "start": "node app.js"
   },
   "dependencies": {
+    "assert": "^1.4.1",
     "body-parser": "^1.15.1",
     "ejs": "2.4.1",
     "express": "4.13.3",
     "http": "0.0.0",
     "messenger-bot": "^2.3.0",
     "method-override": "^2.3.6",
+    "mongodb": "^2.1.18",
     "mongoose": "^4.4.20",
     "morgan": "^1.7.0",
     "node-restful": "^0.2.5",
+    "q": "^1.4.1",
     "request": "^2.72.0"
   },
   "repository": {
