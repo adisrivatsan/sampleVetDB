@@ -11,22 +11,25 @@ app.use(bodyParser.urlencoded({'extended':'true'}));
 app.use(bodyParser.json());
 app.use(bodyParser.json({type:'application/vnd.api+json'}));
 app.use(methodOverride());
+app.use(express.static(__dirname + '/'));
 
-mongoose.connect("mongodb://localhost/" || process.env.MONGOLAB_URI);
+mongoose.connect(process.env.MONGOLAB_URI);
 
-var Resource = app.resource = restful.model('resource', mongoose.Schema({
+var Resource = app.resource = mongoose.model('resource', mongoose.Schema({
     title: String,
-    year: Number,
+    year: Number
   }))
   .methods(['get', 'post', 'put', 'delete']);
 
-Resource.register(app, '/resources');
+//Resource.register(app, '/resources');
 var port = 3000 || port.env.PORT;
 
 
 app.get('/',function(req,res) {
   res.send('this is working');
 })
+
+
 
 app.listen(port);
 console.log('listening on port 3000');
