@@ -18,7 +18,7 @@ app.use(bodyParser.json({type:'application/vnd.api+json'}));
 app.use(methodOverride());
 app.use(express.static(__dirname + '/'));
 
-var connect = mongodb.MongoClient.connect(uri, function(err, db) {
+/*var connect = mongodb.MongoClient.connect(uri, function(err, db) {
    if(err) throw err;
 
    var foodTrucks = db.collection('FoodTruckVendorInfo');
@@ -30,13 +30,13 @@ var connect = mongodb.MongoClient.connect(uri, function(err, db) {
      res.send(data);
    })
    db.close();
-});
+}); */
 
 var printTest = function() {
   console.log('hello');
 }
 
-Q.all([connect,printTest]);
+//Q.all([connect,printTest]);
 //mongoose.connect(process.env.MONGOLAB_URI);
 
 /*var Resource = app.resource = mongoose.model('resource', mongoose.Schema({
