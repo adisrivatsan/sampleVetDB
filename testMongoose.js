@@ -26,7 +26,7 @@ db.once('open', function callback () {
   Vendor.find(function (err, vendors) {
   //console.log('hello' + vendors);
   for(x in vendors) {
-    console.log(vendors[x].Name);
+    console.log(vendors[x].Hour);
   }
   db.close();
   })
