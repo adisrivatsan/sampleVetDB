@@ -8,8 +8,8 @@ var app = express();
 var assert = require('assert');
 var Q = require('q');
 
-var mongodb = require('mongodb');
-var uri = 'mongodb://adisri:srivatsan21@ds015334.mlab.com:15334/heroku_8bp865gl';
+//var mongodb = require('mongodb');
+//var uri = 'mongodb://adisri:srivatsan21@ds015334.mlab.com:15334/heroku_8bp865gl';
 
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({'extended':'true'}));
