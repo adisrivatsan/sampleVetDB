@@ -18,19 +18,8 @@ app.use(bodyParser.json({type:'application/vnd.api+json'}));
 app.use(methodOverride());
 app.use(express.static(__dirname + '/'));
 
-/*var connect = mongodb.MongoClient.connect(uri, function(err, db) {
-   if(err) throw err;
+console.log('yo yo');
 
-   var foodTrucks = db.collection('FoodTruckVendorInfo');
-   //console.log(foodTrucks.find());
-   var cursor = foodTrucks.find();
-   var data = cursor.disconnectHandler.s.topology.s.server.bson;
-   console.log(data);
-   app.get('/yes',function(req,res) {
-     res.send(data);
-   })
-   db.close();
-}); */
 
 var printTest = function() {
   console.log('hello');
